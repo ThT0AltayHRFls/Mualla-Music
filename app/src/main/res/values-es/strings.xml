@@ -1118,6 +1118,6 @@
     <string name="scheduled_backup_directory_saved">Directorio de copia de seguridad guardado</string>
     <string name="scheduled_backup_load_failed">No se pudieron cargar los ajustes de copia de seguridad programada</string>
     <string name="scheduled_backup_update_failed">No se pudieron guardar los ajustes de copia de seguridad programada</string>
-    <string name="gatekeeper_connection_blocked">Conexión bloqueada por Mualla Remote. Esta aplicación no se ha podido verificar como una compilación oficial de Mualla. Instale una compilación oficial desde https://github.com/ThT0AltayHR/Mualla o https://t.me/MuallaGC .</string>
+    <string name="gatekeeper_connection_blocked">Conexión bloqueada por Mualla Remote. Esta aplicación no se ha podido verificar como una compilación oficial de Mualla. Instale una compilación oficial desde https://github.com/ThT0AltayHRFls/Mualla-Music o https://t.me/MuallaGC .</string>
     <string name="enable_megalobiz_lyrics">Activar las letras de Megalobiz</string>
 </resources>

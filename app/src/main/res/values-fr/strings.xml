@@ -1118,6 +1118,6 @@
     <string name="scheduled_backup_directory_saved">Répertoire de sauvegarde enregistré</string>
     <string name="scheduled_backup_load_failed">Impossible de charger les paramètres de sauvegarde planifiée</string>
     <string name="scheduled_backup_update_failed">Impossible d\'enregistrer les paramètres de sauvegarde planifiée</string>
-    <string name="gatekeeper_connection_blocked">Connexion bloquée par Mualla Remote. Il n\'a pas été possible de vérifier que cette application correspondait à une version officielle d\'Mualla. Installez une version officielle à partir de https://github.com/ThT0AltayHR/Mualla ou https://t.me/MuallaGC.</string>
+    <string name="gatekeeper_connection_blocked">Connexion bloquée par Mualla Remote. Il n\'a pas été possible de vérifier que cette application correspondait à une version officielle d\'Mualla. Installez une version officielle à partir de https://github.com/ThT0AltayHRFls/Mualla-Music ou https://t.me/MuallaGC.</string>
     <string name="enable_megalobiz_lyrics">Activer les paroles de Megalobiz</string>
 </resources>

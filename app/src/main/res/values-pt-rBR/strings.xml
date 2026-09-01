@@ -1119,5 +1119,5 @@
     <string name="scheduled_backup_directory_saved">Diretório de backup salvo</string>
     <string name="scheduled_backup_load_failed">Não foi possível carregar as configurações de backup programado</string>
     <string name="scheduled_backup_update_failed">Não foi possível salvar as configurações do backup programado</string>
-    <string name="gatekeeper_connection_blocked">Conexão bloqueada pelo Mualla Remote. Não foi possível verificar se este aplicativo é uma versão oficial do Mualla. Instale uma versão oficial em https://github.com/ThT0AltayHR/Mualla ou https://t.me/MuallaGC.</string>
+    <string name="gatekeeper_connection_blocked">Conexão bloqueada pelo Mualla Remote. Não foi possível verificar se este aplicativo é uma versão oficial do Mualla. Instale uma versão oficial em https://github.com/ThT0AltayHRFls/Mualla-Music ou https://t.me/MuallaGC.</string>
 </resources>

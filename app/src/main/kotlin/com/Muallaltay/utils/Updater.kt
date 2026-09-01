@@ -322,7 +322,7 @@ object Updater {
         cachedEtag: String?,
     ): ReleasesNetworkResult {
         val response: HttpResponse =
-            client.get("https://api.github.com/repos/ThT0AltayHR/Mualla-Music/releases?per_page=$perPage") {
+            client.get("https://api.github.com/repos/ThT0AltayHRFls/Mualla-Music/releases?per_page=$perPage") {
                 headers {
                     append("Accept", "application/vnd.github+json")
                     append("User-Agent", "Mualla-Music")

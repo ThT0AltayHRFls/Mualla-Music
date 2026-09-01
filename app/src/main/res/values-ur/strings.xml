@@ -1108,5 +1108,5 @@
     <string name="scheduled_backup_directory_saved">متبادل کی ڈائریکٹری محفوظ ہوئ</string>
     <string name="scheduled_backup_load_failed">جدول متبادل کی ترتیب لادی نہ جا سکیں</string>
     <string name="scheduled_backup_update_failed">جدول متبادل کی ترتیبات محفوظ نہ ہو سکیں</string>
-    <string name="gatekeeper_connection_blocked">‪‫‪‫Mualla Remote نے رابطہ مسدود کردیا۔ اس ایپ کی بطور آفیشل Mualla تعمیر تصدیق نہیں ہو سکی۔ آفیشل تعمیر https://github.com/ThT0AltayHR/Mualla یا https://t.me/MuallaGC سے نصب کریں۔</string>
+    <string name="gatekeeper_connection_blocked">‪‫‪‫Mualla Remote نے رابطہ مسدود کردیا۔ اس ایپ کی بطور آفیشل Mualla تعمیر تصدیق نہیں ہو سکی۔ آفیشل تعمیر https://github.com/ThT0AltayHRFls/Mualla-Music یا https://t.me/MuallaGC سے نصب کریں۔</string>
 </resources>

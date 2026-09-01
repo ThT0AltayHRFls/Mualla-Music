@@ -1097,5 +1097,5 @@
     <string name="scheduled_backup_directory_saved">Direktori pencadangan disimpan</string>
     <string name="scheduled_backup_load_failed">Pengaturan pencadangan terjadwal tidak dapat dimuat</string>
     <string name="scheduled_backup_update_failed">Pengaturan pencadangan terjadwal tidak dapat disimpan</string>
-    <string name="gatekeeper_connection_blocked">Koneksi diblokir oleh Mualla Remote. Aplikasi ini tidak dapat diverifikasi sebagai build Mualla resmi. Instal build resmi dari https://github.com/ThT0AltayHR/Mualla atau https://t.me/MuallaGC.</string>
+    <string name="gatekeeper_connection_blocked">Koneksi diblokir oleh Mualla Remote. Aplikasi ini tidak dapat diverifikasi sebagai build Mualla resmi. Instal build resmi dari https://github.com/ThT0AltayHRFls/Mualla-Music atau https://t.me/MuallaGC.</string>
 </resources>

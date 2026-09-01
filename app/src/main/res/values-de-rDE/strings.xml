@@ -1023,7 +1023,7 @@
     <string name="web_client_po_token">Webclient-PO-Token</string>
     <string name="po_token_gvs">PO-Token (GVS)</string>
     <string name="po_token_account_notice_body">Melde dich hier mit demselben Google-Konto an, dass du bereits für YouTube Music in Mualla benutzt, bevor du ein PO-Token generierst.</string>
-    <string name="gatekeeper_connection_blocked">Verbindung durch Mualla Remote blockiert. Diese App konnte nicht als offizieller Mualla-Build verifiziert werden. Installiere einen offiziellen Build von https://github.com/ThT0AltayHR/Mualla oder https://t.me/MuallaGC.</string>
+    <string name="gatekeeper_connection_blocked">Verbindung durch Mualla Remote blockiert. Diese App konnte nicht als offizieller Mualla-Build verifiziert werden. Installiere einen offiziellen Build von https://github.com/ThT0AltayHRFls/Mualla-Music oder https://t.me/MuallaGC.</string>
     <string name="scheduled_backup_disabled_description">Automatische Sicherungen sind pausiert.</string>
     <string name="scheduled_backup_enabled_description">Sicherungen laufen automatisch nach dem untenstehenden Plan.</string>
     <string name="po_token_account_notice_same_account">Wenn diese Webansicht ein anderes Konto benutzt, wird das generierte Token nicht richtig funktionieren.</string>
