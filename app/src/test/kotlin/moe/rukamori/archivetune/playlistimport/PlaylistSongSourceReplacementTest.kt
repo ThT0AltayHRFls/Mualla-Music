@@ -1,0 +1,49 @@
+/*
+ * Mualla-Music (2026)
+ * © 🖤 Muallaltay — github.com/ThT0AltayHR
+ * GPL-3.0 License | Contributors: see git history
+ * Do not remove or alter this notice. - Per GPL-3.0 Section 4 & Section 5
+ */
+
+package com.Muallaltay.playlistimport
+
+import com.Muallaltay.db.entities.PlaylistSongMap
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
+import org.junit.Assert.assertThrows
+import org.junit.Test
+
+class PlaylistSongSourceReplacementTest {
+    @Test
+    fun `replacement preserves playlist row and position`() {
+        val original =
+            PlaylistSongMap(
+                id = 42,
+                playlistId = "playlist",
+                songId = "local-song",
+                position = 7,
+                setVideoId = "remote-entry",
+            )
+
+        val replacement = original.replaceSongSource("youtube-song")
+
+        assertEquals(42, replacement.id)
+        assertEquals("playlist", replacement.playlistId)
+        assertEquals(7, replacement.position)
+        assertEquals("youtube-song", replacement.songId)
+        assertNull(replacement.setVideoId)
+    }
+
+    @Test
+    fun `blank replacement id is rejected`() {
+        val original =
+            PlaylistSongMap(
+                playlistId = "playlist",
+                songId = "original",
+            )
+
+        assertThrows(IllegalArgumentException::class.java) {
+            original.replaceSongSource(" ")
+        }
+    }
+}
