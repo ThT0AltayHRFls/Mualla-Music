@@ -301,9 +301,9 @@ fun LibraryMixScreen(
                     }
                 }
 
-                if (supportMualla-MusicAvailable) {
+                if (supportMuallaMusicAvailable) {
                     item(key = "support_archive_tune", contentType = "support_ad") {
-                        SupportMualla-MusicSection(
+                        SupportMuallaMusicSection(
                             onMessage = showMessage,
                             modifier = Modifier.padding(horizontal = 24.dp),
                         )

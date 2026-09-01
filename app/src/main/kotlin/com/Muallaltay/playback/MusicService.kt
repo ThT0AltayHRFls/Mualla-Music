@@ -223,7 +223,7 @@ import com.Muallaltay.models.MediaMetadata
 import com.Muallaltay.models.PersistPlayerState
 import com.Muallaltay.models.PersistQueue
 import com.Muallaltay.models.toMediaMetadata
-import com.Muallaltay.moriextractor.Mualla-MusicExtractorException
+import com.Muallaltay.moriextractor.MuallaMusicExtractorException
 import com.Muallaltay.moriextractor.InMemoryBearerTokenRepository
 import com.Muallaltay.moriextractor.StreamingExtractionManager
 import com.Muallaltay.playback.queues.EmptyQueue
@@ -1190,7 +1190,7 @@ class MusicService :
                 ).setBitmapLoader(CoilBitmapLoader(this, scope))
                 .build()
         setMediaNotificationProvider(
-            Mualla-MusicMediaNotificationProvider(
+            MuallaMusicMediaNotificationProvider(
                 context = this,
                 smallIconResId = R.drawable.small_icon,
             ),
@@ -3437,7 +3437,7 @@ class MusicService :
         val failedUrl = responseException.dataSpec.uri.toString()
         val requestProfile = StreamClientUtils.resolveRequestProfile(failedUrl)
         val authFingerprint = YouTube.currentPlaybackAuthState().fingerprint
-        val extractorAuthFingerprint = Mualla-MusicExtractorCacheFingerprintPrefix + authFingerprint
+        val extractorAuthFingerprint = MuallaMusicExtractorCacheFingerprintPrefix + authFingerprint
         val cachedFailedUrl = playbackUrlCache[mediaId]?.takeIf { it.url == failedUrl }
         val cachedExtractorFailedUrl = extractorPlaybackUrlCache[mediaId]?.takeIf { it.url == failedUrl }
         val failedExpiredUrl =
@@ -7213,7 +7213,7 @@ class MusicService :
 
         val lowDataModeActive = isLowDataModeActive()
         if (preferredStreamClient == PlayerStreamClient.ARCHIVETUNE_EXTRACTOR) {
-            return resolveMualla-MusicExtractorDataSpec(
+            return resolveMuallaMusicExtractorDataSpec(
                 dataSpec = dataSpec,
                 mediaId = mediaId,
             )
@@ -7410,17 +7410,17 @@ class MusicService :
         } ?: resolvedDataSpec
     }
 
-    private fun resolveMualla-MusicExtractorDataSpec(
+    private fun resolveMuallaMusicExtractorDataSpec(
         dataSpec: DataSpec,
         mediaId: String,
     ): DataSpec {
         val authState = YouTube.currentPlaybackAuthState()
-        val authFingerprint = Mualla-MusicExtractorCacheFingerprintPrefix + authState.fingerprint
+        val authFingerprint = MuallaMusicExtractorCacheFingerprintPrefix + authState.fingerprint
         extractorPlaybackUrlCache[mediaId]
             ?.takeIf {
                 it.isValidFor(
                     authFingerprint = authFingerprint,
-                    minimumRemainingMs = Mualla-MusicExtractorExpirySafetyMs,
+                    minimumRemainingMs = MuallaMusicExtractorExpirySafetyMs,
                 )
             }?.let { cached ->
                 scope.launch(Dispatchers.IO) { recoverSong(mediaId) }
@@ -7455,7 +7455,7 @@ class MusicService :
                         )
                     }
 
-                    throwable is Mualla-MusicExtractorException -> {
+                    throwable is MuallaMusicExtractorException -> {
                         throw PlaybackException(
                             getString(R.string.error_no_stream),
                             throwable,
@@ -7509,7 +7509,7 @@ class MusicService :
         return extractorPlaybackUrlCache.values.any { it.url == url } ||
             (
                 uri.scheme.equals("https", ignoreCase = true) &&
-                    uri.host.equals(Mualla-MusicExtractorHost, ignoreCase = true) &&
+                    uri.host.equals(MuallaMusicExtractorHost, ignoreCase = true) &&
                     uri.path?.startsWith("/api/play/") == true
             )
     }
@@ -8485,8 +8485,8 @@ class MusicService :
         const val MIN_AUDIBLE_EFFECTIVE_VOLUME = 0.01f
         const val STUCK_MUTED_VOLUME_EPSILON = 0.001f
         const val AUDIBLE_PLAYBACK_VOLUME_CHECK_MS = 2_000L
-        private const val Mualla-MusicExtractorHost = "moriextractor.koyeb.app"
-        private const val Mualla-MusicExtractorCacheFingerprintPrefix = "mualla_extractor:"
-        private const val Mualla-MusicExtractorExpirySafetyMs = 30_000L
+        private const val MuallaMusicExtractorHost = "moriextractor.koyeb.app"
+        private const val MuallaMusicExtractorCacheFingerprintPrefix = "mualla_extractor:"
+        private const val MuallaMusicExtractorExpirySafetyMs = 30_000L
     }
 }

@@ -5,7 +5,7 @@
  * Do not remove or alter this notice. - Per GPL-3.0 Section 4 & Section 5
  */
 
-package moe.rukamori.mualla.canvas
+package com.Muallaltay.canvas
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -23,12 +23,12 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.coroutines.CancellationException
 import kotlinx.serialization.json.Json
-import moe.rukamori.mualla.canvas.models.CanvasArtwork
-import moe.rukamori.mualla.canvas.models.matchesSongIdentity
+import com.Muallaltay.canvas.models.CanvasArtwork
+import com.Muallaltay.canvas.models.matchesSongIdentity
 import java.util.Locale
 import java.util.concurrent.ConcurrentHashMap
 
-object Mualla-MusicCanvas {
+object MuallaMusicCanvas {
     private const val BASE_URL = "https://artwork-mualla.koiiverse.cloud/"
     private const val FALLBACK_URL = "https://artwork.boidu.dev/"
 

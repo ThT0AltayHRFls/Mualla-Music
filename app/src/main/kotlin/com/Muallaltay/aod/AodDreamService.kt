@@ -45,7 +45,7 @@ import com.Muallaltay.models.MediaMetadata
 import com.Muallaltay.playback.MusicService
 import com.Muallaltay.playback.PlayerConnection
 import com.Muallaltay.ui.player.AodPlayerScreen
-import com.Muallaltay.ui.theme.Mualla-MusicTheme
+import com.Muallaltay.ui.theme.MuallaMusicTheme
 
 @AndroidEntryPoint
 class AodDreamService : DreamService(), LifecycleOwner, SavedStateRegistryOwner {
@@ -96,7 +96,7 @@ class AodDreamService : DreamService(), LifecycleOwner, SavedStateRegistryOwner 
             setViewTreeLifecycleOwner(this@AodDreamService)
             setViewTreeSavedStateRegistryOwner(this@AodDreamService)
             setContent {
-                Mualla-MusicTheme {
+                MuallaMusicTheme {
                     val conn = playerConnection
                     val fallbackMetadata = remember { MutableStateFlow<MediaMetadata?>(null) }
                     val fallbackPlaying = remember { MutableStateFlow(false) }

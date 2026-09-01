@@ -66,7 +66,7 @@ private fun PlaybackCapsuleContent(context: Context) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 GlanceTheme.colors
             } else {
-                Mualla-MusicWidgetColors.providers
+                MuallaMusicWidgetColors.providers
             },
     ) {
         val palette = rememberWidgetPalette(state.dominantColor)
@@ -80,7 +80,7 @@ private fun PlaybackCapsuleContent(context: Context) {
                     .background(palette.surface)
                     .cornerRadius(30.dp)
                     .padding(if (compact) 6.dp else 8.dp)
-                    .clickable(openMualla-MusicAction(context)),
+                    .clickable(openMuallaMusicAction(context)),
         ) {
             PlaybackCapsuleLayout(
                 state = state,

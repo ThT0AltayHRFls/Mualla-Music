@@ -89,7 +89,7 @@ import com.Muallaltay.LocalDatabase
 import com.Muallaltay.LocalDownloadUtil
 import com.Muallaltay.LocalPlayerConnection
 import com.Muallaltay.R
-import com.Muallaltay.constants.Mualla-MusicCanvasKey
+import com.Muallaltay.constants.MuallaMusicCanvasKey
 import com.Muallaltay.constants.ArtistSeparatorsKey
 import com.Muallaltay.constants.ExternalDownloaderEnabledKey
 import com.Muallaltay.constants.ExternalDownloaderPackageKey
@@ -158,7 +158,7 @@ fun PlayerMenu(
     val (artistSeparators) = rememberPreference(ArtistSeparatorsKey, defaultValue = ",;/&")
     val (externalDownloaderEnabled) = rememberPreference(ExternalDownloaderEnabledKey, defaultValue = false)
     val (externalDownloaderPackage) = rememberPreference(ExternalDownloaderPackageKey, defaultValue = "")
-    val (archiveTuneCanvasEnabled) = rememberPreference(Mualla-MusicCanvasKey, defaultValue = false)
+    val (archiveTuneCanvasEnabled) = rememberPreference(MuallaMusicCanvasKey, defaultValue = false)
     val playerDesignStyle by rememberEnumPreference(PlayerDesignStyleKey, defaultValue = PlayerDesignStyle.V4)
     val lowDataModeActive = rememberLowDataModeActive()
     val isCanvasArtworkRefetching by playerConnection.isCanvasArtworkRefetching.collectAsStateWithLifecycle()

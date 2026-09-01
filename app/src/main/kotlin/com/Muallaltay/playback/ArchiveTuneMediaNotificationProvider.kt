@@ -21,7 +21,7 @@ import com.google.common.collect.ImmutableList
 import com.Muallaltay.R
 
 @UnstableApi
-class Mualla-MusicMediaNotificationProvider(
+class MuallaMusicMediaNotificationProvider(
     private val context: Context,
     @DrawableRes smallIconResId: Int,
 ) : MediaNotification.Provider {

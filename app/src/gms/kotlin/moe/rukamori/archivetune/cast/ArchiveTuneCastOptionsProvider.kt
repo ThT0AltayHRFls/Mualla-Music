@@ -14,7 +14,7 @@ import com.google.android.gms.cast.framework.OptionsProvider
 import com.google.android.gms.cast.framework.SessionProvider
 import com.Muallaltay.R
 
-class Mualla-MusicCastOptionsProvider : OptionsProvider {
+class MuallaMusicCastOptionsProvider : OptionsProvider {
     override fun getCastOptions(context: Context): CastOptions {
         val receiverApplicationId =
             context

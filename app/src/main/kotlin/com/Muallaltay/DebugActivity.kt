@@ -64,7 +64,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.Muallaltay.ui.theme.Mualla-MusicTheme
+import com.Muallaltay.ui.theme.MuallaMusicTheme
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -92,7 +92,7 @@ class DebugActivity : ComponentActivity() {
         val deviceInfo = buildDeviceInfo(this)
 
         setContent {
-            Mualla-MusicTheme {
+            MuallaMusicTheme {
                 CrashReportScreen(
                     previewText = previewText,
                     timestampText = timestampText,

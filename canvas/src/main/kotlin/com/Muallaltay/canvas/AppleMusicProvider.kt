@@ -5,7 +5,7 @@
  * Do not remove or alter this notice. - Per GPL-3.0 Section 4 & Section 5
  */
 
-package moe.rukamori.mualla.canvas
+package com.Muallaltay.canvas
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -28,7 +28,7 @@ import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import moe.rukamori.mualla.canvas.models.CanvasArtwork
+import com.Muallaltay.canvas.models.CanvasArtwork
 import java.util.Locale
 import java.util.concurrent.ConcurrentHashMap
 

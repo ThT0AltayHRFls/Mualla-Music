@@ -51,7 +51,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dagger.hilt.android.AndroidEntryPoint
 import com.Muallaltay.ui.component.DefaultDialog
 import com.Muallaltay.ui.menu.LoadingScreen
-import com.Muallaltay.ui.theme.Mualla-MusicTheme
+import com.Muallaltay.ui.theme.MuallaMusicTheme
 import com.Muallaltay.viewmodels.BackupCategory
 import com.Muallaltay.viewmodels.BackupRestoreViewModel
 
@@ -66,7 +66,7 @@ class RestoreBackupFileActivity : ComponentActivity() {
             return
         }
         setContent {
-            Mualla-MusicTheme {
+            MuallaMusicTheme {
                 RestoreBackupFileScreen(
                     uri = uri,
                     onNavigateBack = { finish() },

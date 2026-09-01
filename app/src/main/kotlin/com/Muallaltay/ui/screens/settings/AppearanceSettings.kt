@@ -68,7 +68,7 @@ import androidx.navigation.NavController
 import com.Muallaltay.LocalPlayerAwareWindowInsets
 import com.Muallaltay.R
 import com.Muallaltay.constants.AppFontPreference
-import com.Muallaltay.constants.Mualla-MusicCanvasKey
+import com.Muallaltay.constants.MuallaMusicCanvasKey
 import com.Muallaltay.constants.BackdropBlurAmountKey
 import com.Muallaltay.constants.BackdropEnabledKey
 import com.Muallaltay.constants.BlurRadiusKey
@@ -161,9 +161,9 @@ fun AppearanceSettings(navController: NavController) {
             HidePlayerThumbnailKey,
             defaultValue = false,
         )
-    val (archiveTuneCanvasEnabled, onMualla-MusicCanvasEnabledChange) =
+    val (archiveTuneCanvasEnabled, onMuallaMusicCanvasEnabledChange) =
         rememberPreference(
-            Mualla-MusicCanvasKey,
+            MuallaMusicCanvasKey,
             defaultValue = false,
         )
     val (thumbnailCornerRadius, onThumbnailCornerRadiusChange) =
@@ -768,7 +768,7 @@ fun AppearanceSettings(navController: NavController) {
                         description = stringResource(R.string.mualla_canvas_desc),
                         icon = { Icon(painterResource(R.drawable.motion_photos_on), null) },
                         checked = archiveTuneCanvasEnabled,
-                        onCheckedChange = onMualla-MusicCanvasEnabledChange,
+                        onCheckedChange = onMuallaMusicCanvasEnabledChange,
                     )
                 }
 

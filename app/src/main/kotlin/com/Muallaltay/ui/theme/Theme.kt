@@ -49,13 +49,13 @@ import kotlin.math.abs
 import kotlin.math.min
 
 val DefaultThemeColor = Color(0xFFED5564)
-val LocalMualla-MusicFontPreference = staticCompositionLocalOf { AppFontPreference.DEFAULT }
-val LocalMualla-MusicFontFamily = staticCompositionLocalOf { AppFontFamily }
+val LocalMuallaMusicFontPreference = staticCompositionLocalOf { AppFontPreference.DEFAULT }
+val LocalMuallaMusicFontFamily = staticCompositionLocalOf { AppFontFamily }
 
 @Composable
-fun rememberMualla-MusicLyricsFontFamily(): FontFamily {
-    val fontPreference = LocalMualla-MusicFontPreference.current
-    val fontFamily = LocalMualla-MusicFontFamily.current
+fun rememberMuallaMusicLyricsFontFamily(): FontFamily {
+    val fontPreference = LocalMuallaMusicFontPreference.current
+    val fontFamily = LocalMuallaMusicFontFamily.current
     return remember(fontPreference, fontFamily) {
         if (fontPreference == AppFontPreference.DEFAULT) LyricsFontFamily else fontFamily
     }
@@ -70,7 +70,7 @@ data class ThemeSeedPalette(
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
-fun Mualla-MusicTheme(
+fun MuallaMusicTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     pureBlack: Boolean = false,
     themeColor: Color = DefaultThemeColor,
@@ -183,8 +183,8 @@ fun Mualla-MusicTheme(
         }
 
     CompositionLocalProvider(
-        LocalMualla-MusicFontPreference provides fontPreference,
-        LocalMualla-MusicFontFamily provides resolvedFontFamily,
+        LocalMuallaMusicFontPreference provides fontPreference,
+        LocalMuallaMusicFontFamily provides resolvedFontFamily,
     ) {
         MaterialExpressiveTheme(
             colorScheme = animatedColorScheme,

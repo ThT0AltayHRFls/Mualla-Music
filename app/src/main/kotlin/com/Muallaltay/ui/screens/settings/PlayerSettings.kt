@@ -200,7 +200,7 @@ fun PlayerSettings(navController: NavController) {
             WakelockKey,
             defaultValue = false,
         )
-    val isMualla-MusicExtractorEnabled = false
+    val isMuallaMusicExtractorEnabled = false
     val playerStreamClients =
         remember {
             listOf(
@@ -216,10 +216,10 @@ fun PlayerSettings(navController: NavController) {
         }
     val audioQualityEnabled = selectedPlayerStreamClient != PlayerStreamClient.ARCHIVETUNE_EXTRACTOR
     val isPlayerStreamClientEnabled =
-        remember(isMualla-MusicExtractorEnabled) {
+        remember(isMuallaMusicExtractorEnabled) {
             { client: PlayerStreamClient ->
                 client != PlayerStreamClient.ARCHIVETUNE_EXTRACTOR ||
-                    isMualla-MusicExtractorEnabled
+                    isMuallaMusicExtractorEnabled
             }
         }
 
@@ -227,12 +227,12 @@ fun PlayerSettings(navController: NavController) {
     var showTagsManagementDialog by remember { mutableStateOf(false) }
     var showExternalDownloaderPackageDialog by remember { mutableStateOf(false) }
 
-    LaunchedEffect(playerStreamClient, isMualla-MusicExtractorEnabled) {
+    LaunchedEffect(playerStreamClient, isMuallaMusicExtractorEnabled) {
         if (
             playerStreamClient !in playerStreamClients ||
             (
                 playerStreamClient == PlayerStreamClient.ARCHIVETUNE_EXTRACTOR &&
-                    !isMualla-MusicExtractorEnabled
+                    !isMuallaMusicExtractorEnabled
             )
         ) {
             onPlayerStreamClientChange(PlayerStreamClient.WEB_REMIX)
@@ -350,7 +350,7 @@ fun PlayerSettings(navController: NavController) {
                                 }
 
                                 PlayerStreamClient.ARCHIVETUNE_EXTRACTOR -> {
-                                    if (isMualla-MusicExtractorEnabled) {
+                                    if (isMuallaMusicExtractorEnabled) {
                                         stringResource(
                                             R.string.player_stream_client_mualla_extractor_desc,
                                         )

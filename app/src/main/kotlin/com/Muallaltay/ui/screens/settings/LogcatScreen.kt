@@ -88,7 +88,7 @@ import com.Muallaltay.viewmodels.LogcatUiEntries
 import com.Muallaltay.viewmodels.LogcatUiEntry
 import com.Muallaltay.viewmodels.LogcatUiModel
 import com.Muallaltay.viewmodels.LogcatViewModel
-import com.Muallaltay.ui.component.IconButton as Mualla-MusicIconButton
+import com.Muallaltay.ui.component.IconButton as MuallaMusicIconButton
 
 @Composable
 fun LogcatScreen(
@@ -346,7 +346,7 @@ private fun LogcatTopBar(
             )
         },
         navigationIcon = {
-            Mualla-MusicIconButton(
+            MuallaMusicIconButton(
                 onClick = onNavigateBack,
                 onLongClick = onNavigateBackLongClick,
             ) {

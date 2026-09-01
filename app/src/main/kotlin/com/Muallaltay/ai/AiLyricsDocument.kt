@@ -198,7 +198,7 @@ private data class TtmlLyricsDocument(
     override val formatName: String = "TTML"
 
     override fun rebuild(translations: Map<Int, String>): String {
-        removeMualla-MusicTranslationElements(document.documentElement)
+        removeMuallaMusicTranslationElements(document.documentElement)
 
         val translatedParagraphs =
             paragraphs.mapNotNull { paragraph ->
@@ -239,7 +239,7 @@ private data class TtmlLyricsDocument(
         return transform(document, originalHadDeclaration)
     }
 
-    private fun removeMualla-MusicTranslationElements(root: Element) {
+    private fun removeMuallaMusicTranslationElements(root: Element) {
         val elements = root.getElementsByTagName("*")
         val removableElements = ArrayList<Element>()
         for (index in 0 until elements.length) {

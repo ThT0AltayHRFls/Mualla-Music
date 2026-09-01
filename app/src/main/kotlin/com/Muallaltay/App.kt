@@ -33,7 +33,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import com.Muallaltay.canvas.Mualla-MusicCanvas
+import com.Muallaltay.canvas.MuallaMusicCanvas
 import com.Muallaltay.constants.*
 import com.Muallaltay.extensions.*
 import com.Muallaltay.gatekeeper.GatekeeperResult
@@ -150,7 +150,7 @@ class App :
         )
         MoriCipherUpdateScheduler.schedule(this)
         CanvasArtworkPlaybackCache.init(this)
-        Mualla-MusicCanvas.initialize(BuildConfig.CANVAS_BEARER_TOKEN)
+        MuallaMusicCanvas.initialize(BuildConfig.CANVAS_BEARER_TOKEN)
         PaxsenixLyrics.setUserAgent("Mualla-Music", BuildConfig.VERSION_NAME)
 
         val locale = Locale.getDefault()

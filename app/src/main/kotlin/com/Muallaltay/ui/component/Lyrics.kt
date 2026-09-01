@@ -161,7 +161,7 @@ import com.Muallaltay.ui.component.shimmer.ShimmerHost
 import com.Muallaltay.ui.component.shimmer.TextPlaceholder
 import com.Muallaltay.ui.screens.settings.DarkMode
 import com.Muallaltay.ui.screens.settings.LyricsPosition
-import com.Muallaltay.ui.theme.rememberMualla-MusicLyricsFontFamily
+import com.Muallaltay.ui.theme.rememberMuallaMusicLyricsFontFamily
 import com.Muallaltay.ui.utils.smoothFadingEdge
 import com.Muallaltay.utils.rememberEnumPreference
 import com.Muallaltay.utils.rememberPreference
@@ -172,10 +172,10 @@ import kotlin.time.Duration.Companion.seconds
 
 private val AppleMusicEasing = CubicBezierEasing(0.25f, 0.1f, 0.25f, 1.0f)
 private val SmoothDecelerateEasing = CubicBezierEasing(0.0f, 0.0f, 0.2f, 1.0f)
-private const val Mualla-Music_AUTO_SCROLL_DURATION = 1500L
-private const val Mualla-Music_INITIAL_SCROLL_DURATION = 1000L
-private const val Mualla-Music_SEEK_DURATION = 800L
-private const val Mualla-Music_FAST_SEEK_DURATION = 600L
+private const val MUALLA_MUSIC_AUTO_SCROLL_DURATION = 1500L
+private const val MUALLA_MUSIC_INITIAL_SCROLL_DURATION = 1000L
+private const val MUALLA_MUSIC_SEEK_DURATION = 800L
+private const val MUALLA_MUSIC_FAST_SEEK_DURATION = 600L
 private const val LyricsWordSyncLeadMs = 300L
 
 val LyricsPreviewTime = 2.seconds
@@ -434,7 +434,7 @@ fun Lyrics(
     val lyricsLineSpacing by rememberPreference(LyricsLineSpacingKey, 1.3f)
     val lyricsLineBlur by rememberPreference(LyricsLineBlurKey, true)
     val animationsDisabled = LocalAnimationsDisabled.current
-    val lyricsFontFamily = rememberMualla-MusicLyricsFontFamily()
+    val lyricsFontFamily = rememberMuallaMusicLyricsFontFamily()
 
     val verticalLineSpacing =
         with(LocalDensity.current) {

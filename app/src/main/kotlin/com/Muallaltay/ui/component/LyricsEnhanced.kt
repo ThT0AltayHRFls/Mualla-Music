@@ -135,7 +135,7 @@ import com.Muallaltay.lyrics.LyricsUtils.shouldRomanizeLyricsLine
 import com.Muallaltay.lyrics.WordTimestamp
 import com.Muallaltay.ui.component.shimmer.ShimmerHost
 import com.Muallaltay.ui.component.shimmer.TextPlaceholder
-import com.Muallaltay.ui.theme.rememberMualla-MusicLyricsFontFamily
+import com.Muallaltay.ui.theme.rememberMuallaMusicLyricsFontFamily
 import com.Muallaltay.utils.rememberEnumPreference
 import com.Muallaltay.utils.rememberPreference
 import com.Muallaltay.utils.reportException
@@ -203,7 +203,7 @@ fun LyricsEnhanced(
             )
         }
 
-    val lyricsFontFamily = rememberMualla-MusicLyricsFontFamily()
+    val lyricsFontFamily = rememberMuallaMusicLyricsFontFamily()
 
     val playerBackground by rememberEnumPreference(PlayerBackgroundStyleKey, PlayerBackgroundStyle.DEFAULT)
     val textColor =

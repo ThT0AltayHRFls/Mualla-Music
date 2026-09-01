@@ -66,7 +66,7 @@ private fun PlaybackDeckContent(context: Context) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 GlanceTheme.colors
             } else {
-                Mualla-MusicWidgetColors.providers
+                MuallaMusicWidgetColors.providers
             },
     ) {
         val palette = rememberWidgetPalette(state.dominantColor)
@@ -79,7 +79,7 @@ private fun PlaybackDeckContent(context: Context) {
                     .background(palette.surface)
                     .cornerRadius(30.dp)
                     .padding(if (size.height < 150.dp) 8.dp else 14.dp)
-                    .clickable(openMualla-MusicAction(context)),
+                    .clickable(openMuallaMusicAction(context)),
         ) {
             if (size.width < 260.dp || size.height < 150.dp) {
                 PlaybackDeckCompact(state = state, palette = palette, context = context)

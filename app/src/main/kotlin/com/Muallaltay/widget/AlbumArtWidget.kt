@@ -66,7 +66,7 @@ private fun AlbumArtWidgetContent(context: Context) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 GlanceTheme.colors
             } else {
-                Mualla-MusicWidgetColors.providers
+                MuallaMusicWidgetColors.providers
             },
     ) {
         val palette = rememberWidgetPalette(state.dominantColor)
@@ -82,7 +82,7 @@ private fun AlbumArtWidgetContent(context: Context) {
                     .background(palette.surface)
                     .cornerRadius(28.dp)
                     .padding(outerPadding)
-                    .clickable(openMualla-MusicAction(context)),
+                    .clickable(openMuallaMusicAction(context)),
         ) {
             WidgetArtwork(
                 artPath = state.artPath,

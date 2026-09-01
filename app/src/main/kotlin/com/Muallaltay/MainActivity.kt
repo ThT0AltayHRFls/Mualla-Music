@@ -280,7 +280,7 @@ import com.Muallaltay.ui.screens.search.decodeOnlineSearchQuery
 import com.Muallaltay.ui.screens.search.onlineSearchResultRoute
 import com.Muallaltay.ui.screens.settings.DarkMode
 import com.Muallaltay.ui.screens.settings.NavigationTab
-import com.Muallaltay.ui.theme.Mualla-MusicTheme
+import com.Muallaltay.ui.theme.MuallaMusicTheme
 import com.Muallaltay.ui.theme.ColorSaver
 import com.Muallaltay.ui.theme.DefaultThemeColor
 import com.Muallaltay.ui.theme.extractThemeColor
@@ -836,7 +836,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
 
-            Mualla-MusicTheme(
+            MuallaMusicTheme(
                 darkTheme = useDarkTheme,
                 pureBlack = pureBlack,
                 themeColor = themeColor,
@@ -857,7 +857,7 @@ class MainActivity : ComponentActivity() {
 
                 if (shouldShowOnboarding) {
                     OnboardingRoute(viewModel = onboardingViewModel)
-                    return@Mualla-MusicTheme
+                    return@MuallaMusicTheme
                 }
 
                 BoxWithConstraints(

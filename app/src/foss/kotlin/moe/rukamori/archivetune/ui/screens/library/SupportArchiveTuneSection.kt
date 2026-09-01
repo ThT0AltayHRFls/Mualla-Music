@@ -10,10 +10,10 @@ package com.Muallaltay.ui.screens.library
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
-internal const val supportMualla-MusicAvailable = false
+internal const val supportMuallaMusicAvailable = false
 
 @Composable
-internal fun SupportMualla-MusicSection(
+internal fun SupportMuallaMusicSection(
     @Suppress("UNUSED_PARAMETER") modifier: Modifier = Modifier,
     @Suppress("UNUSED_PARAMETER") onMessage: (String) -> Unit,
 ) = Unit

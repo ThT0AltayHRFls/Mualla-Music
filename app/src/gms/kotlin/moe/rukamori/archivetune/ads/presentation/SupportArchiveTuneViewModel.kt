@@ -19,55 +19,55 @@ import com.Muallaltay.ads.domain.OpenSupportPageUseCase
 import com.Muallaltay.ads.domain.SupportPageOpenResult
 import javax.inject.Inject
 
-internal sealed interface SupportMualla-MusicScreenState {
+internal sealed interface SupportMuallaMusicScreenState {
     @Immutable
-    data object Loading : SupportMualla-MusicScreenState
+    data object Loading : SupportMuallaMusicScreenState
 
     @Immutable
-    data object Success : SupportMualla-MusicScreenState
+    data object Success : SupportMuallaMusicScreenState
 
     @Immutable
-    data object Empty : SupportMualla-MusicScreenState
+    data object Empty : SupportMuallaMusicScreenState
 
     @Immutable
     data class Error(
-        val reason: SupportMualla-MusicError,
-    ) : SupportMualla-MusicScreenState
+        val reason: SupportMuallaMusicError,
+    ) : SupportMuallaMusicScreenState
 }
 
-internal enum class SupportMualla-MusicError {
+internal enum class SupportMuallaMusicError {
     PageUnavailable,
 }
 
-internal enum class SupportMualla-MusicUiEvent {
+internal enum class SupportMuallaMusicUiEvent {
     OpenFailed,
 }
 
 @HiltViewModel
-internal class SupportMualla-MusicViewModel
+internal class SupportMuallaMusicViewModel
     @Inject
     constructor(
         private val openSupportPage: OpenSupportPageUseCase,
     ) : ViewModel() {
         private val _screenState =
-            MutableStateFlow<SupportMualla-MusicScreenState>(SupportMualla-MusicScreenState.Success)
-        val screenState: StateFlow<SupportMualla-MusicScreenState> = _screenState.asStateFlow()
+            MutableStateFlow<SupportMuallaMusicScreenState>(SupportMuallaMusicScreenState.Success)
+        val screenState: StateFlow<SupportMuallaMusicScreenState> = _screenState.asStateFlow()
 
-        private val eventChannel = Channel<SupportMualla-MusicUiEvent>(Channel.BUFFERED)
+        private val eventChannel = Channel<SupportMuallaMusicUiEvent>(Channel.BUFFERED)
         val events = eventChannel.receiveAsFlow()
 
-        fun onSupportMualla-MusicClick() {
-            if (_screenState.value is SupportMualla-MusicScreenState.Loading) return
-            _screenState.value = SupportMualla-MusicScreenState.Loading
+        fun onSupportMuallaMusicClick() {
+            if (_screenState.value is SupportMuallaMusicScreenState.Loading) return
+            _screenState.value = SupportMuallaMusicScreenState.Loading
             when (openSupportPage()) {
                 SupportPageOpenResult.Opened -> {
-                    _screenState.value = SupportMualla-MusicScreenState.Success
+                    _screenState.value = SupportMuallaMusicScreenState.Success
                 }
 
                 SupportPageOpenResult.Unavailable -> {
                     _screenState.value =
-                        SupportMualla-MusicScreenState.Error(SupportMualla-MusicError.PageUnavailable)
-                    eventChannel.trySend(SupportMualla-MusicUiEvent.OpenFailed)
+                        SupportMuallaMusicScreenState.Error(SupportMuallaMusicError.PageUnavailable)
+                    eventChannel.trySend(SupportMuallaMusicUiEvent.OpenFailed)
                 }
             }
         }

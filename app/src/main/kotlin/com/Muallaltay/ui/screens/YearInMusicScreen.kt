@@ -640,7 +640,7 @@ private fun IntroRecapCard(
             }
         }
 
-        Mualla-MusicBrand(
+                                        MuallaMusicBrand(
             contentColor = Color.White,
             modifier = Modifier.align(Alignment.TopStart),
         )
@@ -1065,7 +1065,7 @@ private fun SummaryRecapCard(
                 )
             }
 
-            Mualla-MusicBrand(
+            MuallaMusicBrand(
                 contentColor = RecapInk,
                 modifier = Modifier.align(Alignment.Start),
             )
@@ -1229,7 +1229,7 @@ private fun SummaryGuideLine(modifier: Modifier = Modifier) {
 }
 
 @Composable
-private fun Mualla-MusicBrand(
+private fun MuallaMusicBrand(
     contentColor: Color,
     modifier: Modifier = Modifier,
 ) {

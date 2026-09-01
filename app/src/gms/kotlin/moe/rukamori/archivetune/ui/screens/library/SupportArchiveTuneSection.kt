@@ -38,31 +38,31 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.Muallaltay.R
-import com.Muallaltay.ads.presentation.SupportMualla-MusicScreenState
-import com.Muallaltay.ads.presentation.SupportMualla-MusicUiEvent
-import com.Muallaltay.ads.presentation.SupportMualla-MusicViewModel
+import com.Muallaltay.ads.presentation.SupportMuallaMusicScreenState
+import com.Muallaltay.ads.presentation.SupportMuallaMusicUiEvent
+import com.Muallaltay.ads.presentation.SupportMuallaMusicViewModel
 
-internal const val supportMualla-MusicAvailable = true
+internal const val supportMuallaMusicAvailable = true
 
 @Composable
-internal fun SupportMualla-MusicSection(
+internal fun SupportMuallaMusicSection(
     modifier: Modifier = Modifier,
     onMessage: (String) -> Unit,
-    viewModel: SupportMualla-MusicViewModel = hiltViewModel(),
+    viewModel: SupportMuallaMusicViewModel = hiltViewModel(),
 ) {
     val state by viewModel.screenState.collectAsStateWithLifecycle()
     val failureMessage = stringResource(R.string.support_mualla_failed)
-    val openSupportPage = remember(viewModel) { viewModel::onSupportMualla-MusicClick }
+    val openSupportPage = remember(viewModel) { viewModel::onSupportMuallaMusicClick }
 
     LaunchedEffect(viewModel, onMessage, failureMessage) {
         viewModel.events.collect { event ->
             when (event) {
-                SupportMualla-MusicUiEvent.OpenFailed -> onMessage(failureMessage)
+                SupportMuallaMusicUiEvent.OpenFailed -> onMessage(failureMessage)
             }
         }
     }
 
-    SupportMualla-MusicCard(
+    SupportMuallaMusicCard(
         state = state,
         onClick = openSupportPage,
         modifier = modifier,
@@ -70,8 +70,8 @@ internal fun SupportMualla-MusicSection(
 }
 
 @Composable
-private fun SupportMualla-MusicCard(
-    state: SupportMualla-MusicScreenState,
+private fun SupportMuallaMusicCard(
+    state: SupportMuallaMusicScreenState,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -87,19 +87,19 @@ private fun SupportMualla-MusicCard(
         }
     val description =
         when (state) {
-            is SupportMualla-MusicScreenState.Loading -> {
+            is SupportMuallaMusicScreenState.Loading -> {
                 stringResource(R.string.support_mualla_preparing)
             }
 
-            is SupportMualla-MusicScreenState.Success -> {
+            is SupportMuallaMusicScreenState.Success -> {
                 stringResource(R.string.support_mualla_description)
             }
 
-            is SupportMualla-MusicScreenState.Empty -> {
+            is SupportMuallaMusicScreenState.Empty -> {
                 stringResource(R.string.support_mualla_unavailable)
             }
 
-            is SupportMualla-MusicScreenState.Error -> {
+            is SupportMuallaMusicScreenState.Error -> {
                 stringResource(R.string.support_mualla_retry)
             }
         }
@@ -107,8 +107,8 @@ private fun SupportMualla-MusicCard(
     Card(
         onClick = onClick,
         enabled =
-            state !is SupportMualla-MusicScreenState.Loading &&
-                state !is SupportMualla-MusicScreenState.Empty,
+            state !is SupportMuallaMusicScreenState.Loading &&
+                state !is SupportMuallaMusicScreenState.Empty,
         shape = MaterialTheme.shapes.extraLarge,
         colors =
             CardDefaults.cardColors(
@@ -165,7 +165,7 @@ private fun SupportMualla-MusicCard(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier.size(64.dp),
             ) {
-                if (state is SupportMualla-MusicScreenState.Loading) {
+                if (state is SupportMuallaMusicScreenState.Loading) {
                     CircularProgressIndicator(
                         color = contentColor,
                         strokeWidth = 3.dp,

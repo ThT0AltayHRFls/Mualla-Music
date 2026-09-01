@@ -221,7 +221,7 @@ internal fun WidgetControlButton(
     }
 }
 
-internal fun openMualla-MusicAction(context: Context): Action =
+internal fun openMuallaMusicAction(context: Context): Action =
     actionStartActivity(
         Intent(context, MainActivity::class.java).apply {
             action = Intent.ACTION_MAIN
@@ -235,7 +235,7 @@ internal fun skipNextAction(): Action = actionRunCallback<SkipNextAction>()
 
 internal fun skipPreviousAction(): Action = actionRunCallback<SkipPrevAction>()
 
-internal object Mualla-MusicWidgetColors {
+internal object MuallaMusicWidgetColors {
     val providers =
         ColorProviders(
             light =

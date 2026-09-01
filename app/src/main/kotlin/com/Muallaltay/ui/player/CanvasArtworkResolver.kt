@@ -9,7 +9,7 @@ package com.Muallaltay.ui.player
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import com.Muallaltay.canvas.Mualla-MusicCanvas
+import com.Muallaltay.canvas.MuallaMusicCanvas
 import com.Muallaltay.canvas.models.CanvasArtwork
 import com.Muallaltay.canvas.models.matchesSongIdentity
 import timber.log.Timber
@@ -82,7 +82,7 @@ internal suspend fun fetchCanvasArtworkForPlayback(
         }
 
     return candidates.firstNotNullOfOrNull { (song, artist) ->
-        Mualla-MusicCanvas
+        MuallaMusicCanvas
             .getBySongArtist(
                 song = song,
                 artist = artist,

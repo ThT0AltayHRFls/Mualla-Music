@@ -67,7 +67,7 @@ private fun MusicWidgetContent(context: Context) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 GlanceTheme.colors
             } else {
-                Mualla-MusicWidgetColors.providers
+                MuallaMusicWidgetColors.providers
             },
     ) {
         val palette = rememberWidgetPalette(state.dominantColor)
@@ -119,7 +119,7 @@ private fun MusicWidgetBar(
                 .background(palette.surface)
                 .cornerRadius(28.dp)
                 .padding(6.dp)
-                .clickable(openMualla-MusicAction(context)),
+                .clickable(openMuallaMusicAction(context)),
     ) {
         Column(modifier = GlanceModifier.fillMaxSize()) {
             Row(
@@ -186,7 +186,7 @@ private fun MusicWidgetPanel(
                 .background(palette.surface)
                 .cornerRadius(28.dp)
                 .padding(16.dp)
-                .clickable(openMualla-MusicAction(context)),
+                .clickable(openMuallaMusicAction(context)),
     ) {
         Column(modifier = GlanceModifier.fillMaxSize()) {
             Row(

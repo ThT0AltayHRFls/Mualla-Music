@@ -62,7 +62,7 @@ import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import com.Muallaltay.R
-import com.Muallaltay.ui.theme.rememberMualla-MusicLyricsFontFamily
+import com.Muallaltay.ui.theme.rememberMuallaMusicLyricsFontFamily
 
 @Stable
 private data class LyricsShareColors(
@@ -157,7 +157,7 @@ fun LyricsImageCard(
 ) {
     val context = LocalContext.current
     val density = LocalDensity.current
-    val lyricsFontFamily = rememberMualla-MusicLyricsFontFamily()
+    val lyricsFontFamily = rememberMuallaMusicLyricsFontFamily()
     val colors =
         remember(glassStyle, textColor, secondaryTextColor) {
             LyricsShareColors(

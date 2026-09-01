@@ -66,7 +66,7 @@ private fun PlaybackSpotlightContent(context: Context) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 GlanceTheme.colors
             } else {
-                Mualla-MusicWidgetColors.providers
+                MuallaMusicWidgetColors.providers
             },
     ) {
         val palette = rememberWidgetPalette(state.dominantColor)
@@ -82,7 +82,7 @@ private fun PlaybackSpotlightContent(context: Context) {
                     .background(palette.surface)
                     .cornerRadius(30.dp)
                     .padding(padding)
-                    .clickable(openMualla-MusicAction(context)),
+                    .clickable(openMuallaMusicAction(context)),
         ) {
             WidgetArtwork(
                 artPath = state.artPath,

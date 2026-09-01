@@ -78,7 +78,7 @@ private fun NowPlayingCardContent(context: Context) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 GlanceTheme.colors
             } else {
-                Mualla-MusicWidgetColors.providers
+                MuallaMusicWidgetColors.providers
             },
     ) {
         val palette = rememberWidgetPalette(state.dominantColor)
@@ -91,7 +91,7 @@ private fun NowPlayingCardContent(context: Context) {
                     .background(palette.surface)
                     .cornerRadius(28.dp)
                     .padding(12.dp)
-                    .clickable(openMualla-MusicAction(context)),
+                    .clickable(openMuallaMusicAction(context)),
         ) {
             if (size.height < 108.dp) {
                 NowPlayingCardBar(state = state, palette = palette, context = context)

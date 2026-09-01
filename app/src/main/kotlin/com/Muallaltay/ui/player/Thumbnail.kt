@@ -89,7 +89,7 @@ import kotlinx.coroutines.withContext
 import com.Muallaltay.LocalPlayerConnection
 import com.Muallaltay.R
 import com.Muallaltay.canvas.models.CanvasArtwork
-import com.Muallaltay.constants.Mualla-MusicCanvasKey
+import com.Muallaltay.constants.MuallaMusicCanvasKey
 import com.Muallaltay.constants.BackdropBlurAmountKey
 import com.Muallaltay.constants.BackdropEnabledKey
 import com.Muallaltay.constants.CropThumbnailToSquareKey
@@ -142,7 +142,7 @@ fun Thumbnail(
     val (enableHapticFeedback) = rememberPreference(EnableHapticFeedbackKey, true)
 
     val hidePlayerThumbnail by rememberPreference(HidePlayerThumbnailKey, false)
-    val archiveTuneCanvasEnabled by rememberPreference(Mualla-MusicCanvasKey, false)
+    val archiveTuneCanvasEnabled by rememberPreference(MuallaMusicCanvasKey, false)
     val lowDataModeActive = rememberLowDataModeActive()
     val playerDesignStyle by rememberEnumPreference(
         key = PlayerDesignStyleKey,

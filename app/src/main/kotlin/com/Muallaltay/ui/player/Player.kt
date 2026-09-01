@@ -158,7 +158,7 @@ import com.Muallaltay.LocalDownloadUtil
 import com.Muallaltay.LocalPlayerConnection
 import com.Muallaltay.R
 import com.Muallaltay.canvas.models.CanvasArtwork
-import com.Muallaltay.constants.Mualla-MusicCanvasKey
+import com.Muallaltay.constants.MuallaMusicCanvasKey
 import com.Muallaltay.constants.BackdropBlurAmountKey
 import com.Muallaltay.constants.BackdropEnabledKey
 import com.Muallaltay.constants.BlurRadiusKey
@@ -463,7 +463,7 @@ fun BottomSheetPlayer(
     val aodModeEnabled by playerConnection.aodModeEnabled.collectAsStateWithLifecycle()
     val currentLyricsEntity by playerConnection.currentLyrics.collectAsStateWithLifecycle(initialValue = null)
     val (thumbnailCornerRadius) = rememberPreference(ThumbnailCornerRadiusKey, defaultValue = 8f)
-    val archiveTuneCanvasEnabled by rememberPreference(Mualla-MusicCanvasKey, false)
+    val archiveTuneCanvasEnabled by rememberPreference(MuallaMusicCanvasKey, false)
     val lowDataModeActive = rememberLowDataModeActive()
     val (maxCanvasCacheSize, _) =
         rememberPreference(
