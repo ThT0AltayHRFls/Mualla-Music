@@ -50,7 +50,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:usesCleartextTraffic="true"
         android:supportsRtl="false"
-        android:theme="@style/Theme.Mualla-Music"
+        android:theme="@style/Theme.Mualla"
         tools:targetApi="tiramisu">
         <uses-library
             android:name="org.apache.http.legacy"
@@ -61,7 +61,7 @@
             android:configChanges="uiMode"
             android:exported="true"
             android:launchMode="singleTask"
-            android:theme="@style/Theme.Mualla-Music"
+            android:theme="@style/Theme.Mualla"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -178,12 +178,12 @@
             android:name=".musicrecognition.MusicRecognitionTileActionActivity"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:theme="@style/Theme.Mualla-Music.Transparent" />
+            android:theme="@style/Theme.Mualla.Transparent" />
 
         <activity
             android:name=".RestoreBackupFileActivity"
             android:exported="true"
-            android:theme="@style/Theme.Mualla-Music"
+            android:theme="@style/Theme.Mualla"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -374,19 +374,19 @@
             android:name=".DebugActivity"
             android:exported="true"
             android:process=":crash"
-            android:theme="@style/Theme.Mualla-Music">
+            android:theme="@style/Theme.Mualla">
         </activity>
 
         <activity
             android:name=".ui.screens.settings.PoTokenExtractionActivity"
             android:exported="false"
-            android:theme="@style/Theme.Mualla-Music" />
+            android:theme="@style/Theme.Mualla" />
 
         <activity
             android:name=".discord.DiscordOAuthCallbackActivity"
             android:exported="true"
             android:noHistory="true"
-            android:theme="@style/Theme.Mualla-Music">
+            android:theme="@style/Theme.Mualla">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
